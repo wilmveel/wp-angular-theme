@@ -1,0 +1,10 @@
+<h2>Wp-Posts</h2>
+<p>This directive is an container for loading multiple posts and paginate trough them.</p>
+
+<div wp-posts>
+  <div wp-post>
+    <h1>{{title}}</h1>
+    <div ng-bind-html="content"></div>
+    <div>Date: {{date | date:'dd-MM-yyyy'}}</div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="row">
+	<div class="col-xs-6">
+		<h1>Wp-Post</h1>
+		<p>The wp-post directives loads the content of one item asynchronous base on the id of the post</p>
+		<p>After de content is loaded the all the attributes of the post will be availibe on the scope of the directive. Here is an list of all the availible variable</p>
+		<ul>
+		  <li>ID</li>
+		  <li>title</li>
+		  <li>status</li>
+		  <li>type</li>
+		  <li>author</li>
+		  <li>content</li>
+		  <li>parent</li>
+		  <li>link</li>
+		  <li>date</li>
+		  <li>modified</li>
+		  <li>format</li>
+		  <li>slug</li>
+		  <li>guid</li>
+		  <li>excerpt</li>
+		  <li>menu_order</li>
+		  <li>comment_status</li>
+		  <li>ping_status</li>
+		  <li>sticky</li>
+		  <li>date_tz</li>
+		  <li>date_gmt</li>
+		  <li>modified_tz</li>
+		  <li>modified_gmt</li>
+		  <li>password</li>
+		  <li>post_meta</li>
+		  <li>meta</li>
+		  <li>featured_image</li>
+		  <li>terms</li>
+		</ul>
+	</div>
+	<div class="col-xs-6">
+		<h1>Examples</h1>
+		<div class="panel panel-default" wp-example>
+			<div class="panel-heading">
+				Load single post as element
+			</div>
+			<div class="panel-body code">
+				<wp-post id="1" >
+					<h1>{{title}}</h1>
+					<div ng-bind-html="content"></div>
+				</wp-post>
+			</div>
+			<div class="panel-footer">
+				<pre class="example"></pre>
+			</div>
+		</div>
+
+		<div class="panel panel-default" wp-example>
+			<div class="panel-heading">
+				Load single post as attribute with formated date
+			</div>
+			<div class="panel-body code">
+				<div wp-post id="1">
+					<h1>{{title}}</h1>
+					<div ng-bind-html="content"></div>
+					<div>Date: {{date | date:'MM/dd/yyyy @ h:mma'}}</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<pre class="example"></pre>
+			</div>
+		</div>			
+	</div>
+</div>
+
