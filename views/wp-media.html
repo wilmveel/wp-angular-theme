@@ -1,0 +1,59 @@
+<div class="row">
+	<div class="col-xs-6">
+		<h1>Wp-Media</h1>
+		<p>The wp-media derective allows you to load media item and display them as an downloadable resource or as an image.</p>
+	</div>
+	<div class="col-xs-6">
+		<div class="panel panel-default panel-example" wp-example>
+			<div class="panel-heading">
+				<i>#1:</i> Downloadable resource based on id
+			</div>
+			<div class="panel-body code">
+				<wp-media id="48" />
+			</div>
+			<div class="panel-footer example">
+			</div>
+		</div>
+
+		<div class="panel panel-default panel-example" wp-example>
+			<div class="panel-heading">
+				<i>#2:</i> Image based on id
+			</div>
+			<div class="panel-body code">
+				<wp-media id="25" width="200px"/>
+			</div>
+			<div class="panel-footer example">
+			</div>
+		</div>
+
+		<div class="panel panel-default panel-example" wp-example>
+			<div class="panel-heading">
+				<i>#3:</i> Customized media element
+			</div>
+			<div class="panel-body code">
+				<wp-media id="48" />
+					<a target="_blank" ng-href="{{source}}"  id="48">
+						<img src="http://localhost/wp-angular/wp-includes/images/media/document.png" />
+					</a>
+				</wp-media>
+			</div>
+			<div class="panel-footer example">
+			</div>
+		</div>
+
+		<div class="panel panel-default panel-example" wp-example>
+			<div class="panel-heading">
+				<i>#3:</i> Load based on slug
+			</div>
+			<div class="panel-body code">
+				<wp-media slug="logo" />
+					<img ng-src="{{source}}" width="300px"/>
+				</wp-media>
+			</div>
+			<div class="panel-footer example">
+			</div>
+		</div>
+
+	</div>
+
+</div>

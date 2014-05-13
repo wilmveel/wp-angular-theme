@@ -21,6 +21,9 @@ angular.module('wpAngularTemplate', [
   .when('/directive/wp-menu', {
     templateUrl: wpBloginfo.templateUrl + '/views/wp-menu.html'
   })
+  .when('/directive/wp-media', {
+    templateUrl: wpBloginfo.templateUrl + '/views/wp-media.html'
+  })
   .otherwise({
     redirectTo: '/home'
   });

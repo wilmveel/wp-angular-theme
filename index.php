@@ -23,9 +23,15 @@
         <script>
           document.createElement('wp-post');
           document.createElement('wp-posts');
+          document.createElement('wp-page');
+          document.createElement('wp-menu');
+          document.createElement('wp-media');
 
           document.createElement('wp:post');
           document.createElement('wp:posts');
+          document.createElement('wp:page');
+          document.createElement('wp:menu');
+          document.createElement('wp:media');
         </script>
       <![endif]-->
 
@@ -53,6 +59,7 @@
                 <li><a href="#/directive/wp-posts">Wp-Posts</a></li>
                 <li><a href="#/directive/wp-page">Wp-Page</a></li>
                 <li><a href="#/directive/wp-menu">Wp-Menu</a></li>
+                <li><a href="#/directive/wp-media">Wp-Media</a></li>
               </ul>
             </li>
 
@@ -74,5 +81,6 @@
     <script src="<?php bloginfo('template_directory'); ?>/app/directives/wpExample.js"></script>
 
     <?php wp_footer(); ?>
+    
   </body>
 </html>
