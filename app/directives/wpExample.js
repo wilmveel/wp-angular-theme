@@ -10,20 +10,32 @@ angular.module('wpAngularTemplate').directive("wpExample", function($log){
 
 			var content = codeElement;
 			content = content.html();
-			content = content.toString();
 			content = content.replace(/\t/g, '');
-			content = content.replace(/\{\{/g, '&#123;&#123;');
-			content = content.replace(/\}\}/g, '&#125;&#125;');
-
 			
-			//content = content.replace(/(\r\n|\n|\r)/gm, "");
+
+			content = escapeHTML(content);
+
+			content = content.replace(/=""/g, '');
+
+			content = content.replace(/\{/g, '&#123;');
+			content = content.replace(/\}/g, '&#125;');
+
 			$log.debug("content", content);
-			exampleElement.text(content);
+			exampleElement.attr("ng-non-bindable", "");
+			exampleElement.html(content);
 
-      			
-      	
-
-			
 	    }	
 	}
 });
+
+var escapeEl = document.createElement('textarea');
+
+function escapeHTML(html) {
+	escapeEl.textContent = html;
+	return escapeEl.innerHTML;
+};
+
+function unescapeHTML(html) {
+	escapeEl.innerHTML = html;
+	return escapeEl.textContent;
+};

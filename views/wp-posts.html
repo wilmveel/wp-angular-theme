@@ -1,10 +1,96 @@
-<h2>Wp-Posts</h2>
-<p>This directive is an container for loading multiple posts and paginate trough them.</p>
 
-<div wp-posts>
-  <div wp-post>
-    <h1>{{title}}</h1>
-    <div ng-bind-html="content"></div>
-    <div>Date: {{date | date:'dd-MM-yyyy'}}</div>
-  </div>
+<div class="row">
+	<div class="col-xs-6">
+		<h1>Wp-Posts</h1>
+		<p>This directive is an container for loading multiple posts and paginate trough them. To display one post the wp-post directive is used. For all the availible attributes have a look there</p>
+		<p>This directive gives you the option to order and filter on fields></p>
+		<p>Post can be orderde on the following fields by making use of the order and orderby attributes. For more information see <a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters">Order & Orderby Parameters</a> on the wordpress website.</p>
+		<ul>
+			<li>
+				<span>order</span>
+				<ul>
+					<li>ASC</li>
+					<li>DESC</li>
+				</ul>
+			</li>
+			<li>
+				<span>orderby</span>
+				<ul>
+					<li>none</li>
+					<li>ID</li>
+					<li>author</li>
+					<li>title</li>
+					<li>name</li>
+					<li>date</li>
+					<li>modified</li>
+					<li>parent</li>
+					<li>rand</li>
+					<li>comment_count</li>
+					<li>comment_count</li>
+					<li>meta_value</li>
+					<li>meta_value_num</li>
+					<li>post__in</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p>The amount of posts which should be load can be set with the 'numberofposts' attibute</p>
+		
+	</div>
+
+	
+
+	<div class="col-xs-6">
+		<h1>Examples</h1>
+		<div class="panel panel-default" wp-example>
+			<div class="panel-heading">
+				Load a list of the latest posts
+			</div>
+			<div class="panel-body code">
+				<ul wp-posts>
+					<li wp-post>
+						<h1>{{title}}</h1>
+						<div ng-bind-html="content"></div>
+					</li>
+				</ul>
+			</div>
+			<div class="panel-footer">
+				<pre class="example" ng-non-bindable></pre>
+			</div>
+		</div>
+		<div class="panel panel-default" wp-example>
+			<div class="panel-heading">
+				Load a list of posts and order on last modified date
+			</div>
+			<div class="panel-body code">
+				<ul wp-posts orderBy="modified">
+					<li wp-post>
+						<h1>{{title}}</h1>
+						<div ng-bind-html="content"></div>
+						<div>Modify date: {{modified | date:'dd-MM-yyyy @ hh:mm'}}</div>
+					</li>
+				</ul>
+			</div>
+			<div class="panel-footer">
+				<pre class="example" ></pre>
+			</div>
+		</div>	
+		<div class="panel panel-default" wp-example>
+			<div class="panel-heading">
+				Only load the latest post
+			</div>
+			<div class="panel-body code">
+				<ul wp-posts numberofposts="1" >
+					<li wp-post>
+						<h1>{{title}}</h1>
+						<div ng-bind-html="content"></div>
+						<div>Create date: {{date | date:'dd-MM-yyyy @ hh:mm'}}</div>
+					</li>
+				</ul>
+			</div>
+			<div class="panel-footer">
+				<pre class="example" ></pre>
+			</div>
+		</div>	
+	</div>
 </div>

@@ -1,17 +1,57 @@
-<div>
-<ul class="menu" wp-menu name="secondary">
-  <li>
-    <a href="#">{{title}}</a>
-  </li>
-</ul>
+<div class="row">
+  <div class="col-xs-6">
+    <h1>Wp-Menu</h1>
+    <p>This directive is an container for loading multiple posts and paginate trough them. To display one post the wp-post directive is used. For all the availible attributes have a look there</p>
 
-<ul class="menu" wp-menu name="primary">
-  <li>
-    <a href="#">{{title}}</a>
-    <ul class="subMenu" wp-menu>
-      <li>
-        <a href="#">{{title}}</a>
-      </li>
-    </ul>
-  </li>
-</ul>
+    <p>This directive gives you the option to filter 
+  </div>
+  <div class="col-xs-6">
+    <h1>Examples</h1>
+    <div class="panel panel-default" wp-example>
+      <div class="panel-heading">
+        Load the template menu
+      </div>
+      <div class="panel-body code">
+        <ul class="menu" wp-menu name="secondary">
+          <li>
+            <a href="#">{{title}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="panel-footer">
+        <pre class="example"></pre>
+      </div>
+    </div>
+    <div class="panel panel-default" wp-example>
+      <div class="panel-heading">
+        Load the menu and the first sub menu
+      </div>
+      <div class="panel-body code">
+        <div class="navbar navbar-inverse" role="navigation">
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div>
+        <ul class="menu" wp-menu name="primary">
+        <li>
+          <a href="#">{{title}}</a>
+          <ul class="subMenu" wp-menu>
+            <li>
+              <a href="#">{{title}}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+      <div class="panel-footer">
+        <pre class="example"></pre>
+      </div>
+    </div>  
+  </div>
+</div>
+
+<div>
+
+
+

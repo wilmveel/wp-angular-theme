@@ -11,7 +11,17 @@ angular.module('wpAngularTemplate', [
   })
   .when('/directive/wp-post', {
     templateUrl: wpBloginfo.templateUrl + '/views/wp-post.html'
-  }).otherwise({
+  })
+  .when('/directive/wp-posts', {
+    templateUrl: wpBloginfo.templateUrl + '/views/wp-posts.html'
+  })
+  .when('/directive/wp-page', {
+    templateUrl: wpBloginfo.templateUrl + '/views/wp-page.html'
+  })
+  .when('/directive/wp-menu', {
+    templateUrl: wpBloginfo.templateUrl + '/views/wp-menu.html'
+  })
+  .otherwise({
     redirectTo: '/home'
   });
 
