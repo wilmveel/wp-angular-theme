@@ -10,9 +10,9 @@
 <div class="row">
 	<div class="col-xs-6">
 
-		<div class="panel panel-default" wp-example>
+		<div class="panel panel-default panel-example" wp-example>
 			<div class="panel-heading">
-				Simple page loaded based on ID
+				<i>#1:</i> Simple page loaded based on ID
 			</div>
 			<div class="panel-body code">
 				<div wp-page id="11" >
@@ -20,14 +20,13 @@
 					<div ng-bind-html="content"></div>
 				</div>
 			</div>
-			<div class="panel-footer">
-				<pre class="example"></pre>
+			<div class="panel-footer example">
 			</div>
 		</div>
 
-		<div class="panel panel-default" wp-example>
+		<div class="panel panel-default panel-example" wp-example>
 			<div class="panel-heading">
-				Simple page loaded based on slug
+				<i>#2:</i> Simple page loaded based on slug
 			</div>
 			<div class="panel-body code">
 				<div wp-page slug="simple-page" >
@@ -35,15 +34,14 @@
 					<div ng-bind-html="content"></div>
 				</div>
 			</div>
-			<div class="panel-footer">
-				<pre class="example"></pre>
+			<div class="panel-footer example">
 			</div>
 		</div>
 	</div>
 	<div class="col-xs-6">
-		<div class="panel panel-default" wp-example>
+		<div class="panel panel-default panel-example" wp-example>
 			<div class="panel-heading">
-				Page with media
+				<i>#3:</i> Page with media image
 			</div>
 			<div class="panel-body code">
 				<div wp-page id="24" >
@@ -51,14 +49,24 @@
 					<div ng-bind-html="content"></div>
 				</div>
 			</div>
-			<div class="panel-footer">
-				<pre class="example"></pre>
+			<div class="panel-footer example">
+			</div>
+		</div>
+
+		<div class="panel panel-default panel-example" wp-example>
+			<div class="panel-heading">
+				<i>#4:</i> Page with featured image
+			</div>
+			<div class="panel-body code">
+				<div wp-page slug="page-with-featured-image" >
+					<img width="200px" ng-src="{{featured_image.source}}" />
+					<h1>{{title}}</h1>
+					<div ng-bind-html="content"></div>
+				</div>
+			</div>
+			<div class="panel-footer example">
 			</div>
 		</div>
 	</div>
 
-	<div class="col-xs-6">
-
-		
-	</div>
 </div>

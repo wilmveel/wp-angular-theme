@@ -22,7 +22,12 @@ angular.module('wpAngularTemplate').directive("wpExample", function($log){
 
 			$log.debug("content", content);
 			exampleElement.attr("ng-non-bindable", "");
-			exampleElement.html(content);
+			
+			if(content){
+				exampleElement.html("<pre>" + content + "</pre>");
+			}else{
+				exampleElement.html('<div class="alert alert-danger">Cannot load example! probably you use IE!</div>');
+			}
 
 	    }	
 	}

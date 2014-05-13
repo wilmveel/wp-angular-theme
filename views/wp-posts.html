@@ -2,8 +2,9 @@
 <div class="row">
 	<div class="col-xs-6">
 		<h1>Wp-Posts</h1>
-		<p>This directive is an container for loading multiple posts and paginate trough them. To display one post the wp-post directive is used. For all the availible attributes have a look there</p>
-		<p>This directive gives you the option to order and filter on fields></p>
+		<p>This directive is an container for loading multiple posts and paginate trough them. To display the posts the <a href="#/directive/wp-post">wp-post</a> directive is used. For all the availible attributes have a look at this page.</p>
+		<p>This directive gives you the option to order and filter on fields</p>
+		<hr/>
 		<p>Post can be orderde on the following fields by making use of the order and orderby attributes. For more information see <a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters">Order & Orderby Parameters</a> on the wordpress website.</p>
 		<ul>
 			<li>
@@ -33,18 +34,18 @@
 				</ul>
 			</li>
 		</ul>
+		<hr/>
+		<p>The amount of posts which should be load can be set with the 'numberofposts' attibute. See example 3 for an implementation</p>
 
-		<p>The amount of posts which should be load can be set with the 'numberofposts' attibute</p>
-		
 	</div>
 
 	
 
 	<div class="col-xs-6">
 		<h1>Examples</h1>
-		<div class="panel panel-default" wp-example>
+		<div class="panel panel-default panel-example" wp-example>
 			<div class="panel-heading">
-				Load a list of the latest posts
+				#1 Load a list of the latest posts
 			</div>
 			<div class="panel-body code">
 				<ul wp-posts>
@@ -58,9 +59,9 @@
 				<pre class="example" ng-non-bindable></pre>
 			</div>
 		</div>
-		<div class="panel panel-default" wp-example>
+		<div class="panel panel-default panel-example" wp-example>
 			<div class="panel-heading">
-				Load a list of posts and order on last modified date
+				#2 Load a list of posts and order on last modified date
 			</div>
 			<div class="panel-body code">
 				<ul wp-posts orderBy="modified">
@@ -75,9 +76,9 @@
 				<pre class="example" ></pre>
 			</div>
 		</div>	
-		<div class="panel panel-default" wp-example>
+		<div class="panel panel-default panel-example" wp-example>
 			<div class="panel-heading">
-				Only load the latest post
+				#3 Only load the latest post
 			</div>
 			<div class="panel-body code">
 				<ul wp-posts numberofposts="1" >

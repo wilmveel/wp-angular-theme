@@ -8,7 +8,6 @@
 
     <!-- Bootstrap -->
     <link href="<?php bloginfo('template_directory'); ?>/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php bloginfo('template_directory'); ?>/lib/prettify/prettify.css" rel="stylesheet">
     <link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,7 +31,7 @@
 
   </head>
   <body>
-    <div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -48,7 +47,7 @@
             <li class="active"><a href="#">Home</a></li>
             
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Directives <b class="caret"></b></a>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Directives <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#/directive/wp-post">Wp-Post</a></li>
                 <li><a href="#/directive/wp-posts">Wp-Posts</a></li>

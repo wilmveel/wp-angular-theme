@@ -10,4 +10,6 @@ function wp_angular_setup() {
 }
 
 add_action( 'after_setup_theme', 'wp_angular_setup' );
+
+add_theme_support( 'post-thumbnails' ); 
 ?>
