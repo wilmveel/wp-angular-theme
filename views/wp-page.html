@@ -4,18 +4,15 @@
 		<p>The wp-page is able to load the content of a singel page based on an ID or the slug</p>
 	</div>
 </div>
-		
-<h1>Examples</h1>
 
 <div class="row">
 	<div class="col-xs-6">
-
 		<div class="panel panel-default panel-example" wp-example>
 			<div class="panel-heading">
 				<i>#1:</i> Simple page loaded based on ID
 			</div>
 			<div class="panel-body code">
-				<div wp-page id="11" >
+				<div wp-page id="2" >
 					<h1>{{title}}</h1>
 					<div ng-bind-html="content"></div>
 				</div>
@@ -29,7 +26,7 @@
 				<i>#2:</i> Simple page loaded based on slug
 			</div>
 			<div class="panel-body code">
-				<div wp-page slug="simple-page" >
+				<div wp-page slug="sample-page" >
 					<h1>{{title}}</h1>
 					<div ng-bind-html="content"></div>
 				</div>
@@ -41,10 +38,10 @@
 	<div class="col-xs-6">
 		<div class="panel panel-default panel-example" wp-example>
 			<div class="panel-heading">
-				<i>#3:</i> Page with media image
+				<i>#3:</i> Page with image
 			</div>
 			<div class="panel-body code">
-				<div wp-page id="24" >
+				<div wp-page slug="page-with-image" >
 					<h1>{{title}}</h1>
 					<div ng-bind-html="content"></div>
 				</div>
