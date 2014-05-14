@@ -6,8 +6,11 @@ angular.module('wpAngularTemplate', [
   .when('/home', {
     templateUrl: wpBloginfo.templateUrl + '/views/home.html'
   })
-  .when('/contact', {
-    templateUrl: wpBloginfo.templateUrl + '/views/contact.html'
+  .when('/why', {
+    templateUrl: wpBloginfo.templateUrl + '/views/why.html'
+  })
+  .when('/about', {
+    templateUrl: wpBloginfo.templateUrl + '/views/about.html'
   })
   .when('/directive/wp-post', {
     templateUrl: wpBloginfo.templateUrl + '/views/wp-post.html'

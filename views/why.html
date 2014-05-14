@@ -1,0 +1,31 @@
+<h1>Why use Wp-Angular</h1>
+<p>Wp-Angular allows you to write your Wordpress themes in an declarative way. Instaed of writing your own loop and iterating over content in php server side you do everytihng in html. The following example wil give the same result only one is in the traditional php style one is done in the Angular way.<p>
+
+<p>Both example show a list of the 5 most recent post. The first example is done in Wordpress style where php and Html is mixed to generat the list. The second example is done in het Angular way wich is a pure html implementation.</p>
+
+<div class="row">
+	<div class="col-xs-6">
+		<h2>Wordpress style</h2>
+		<pre>
+&lt;?php 
+	$args = array( 'numberposts' =&gt; '5' ); 
+	$recent_posts = wp_get_recent_posts( $args ); 
+	foreach( $recent_posts as $recent ){ 
+		echo '&lt;li&gt;;
+		echo &lt;a href=&quot;' . get_permalink($recent[&quot; title=&quot;Look '.esc_attr($recent[&quot;&gt;' . $recent[&quot;post_title&quot;].'&lt;/a&gt;;
+		echo &lt;/li&gt; ';
+	} 
+?&gt;					
+		</pre>
+	</div>
+	<div class="col-xs-6">
+		<h2>AngularJs way</h2>
+		<pre ng-non-bindable>
+&lt;ul wp-posts numberofposts=&quot;5&quot;&gt; 
+	&lt;li wp-post&gt; 
+		&lt;a ng-href=&quot;{{url}}&quot; &gt;{{title}}&lt;/a&gt; 
+	&lt;/li&gt; 
+&lt;/ul&gt;
+		</pre>
+	</div>
+</div>
