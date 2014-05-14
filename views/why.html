@@ -1,10 +1,15 @@
-<h1>Why use Wp-Angular</h1>
-
-<p>Wp-Angular allows you to write your Wordpress themes in an declarative way. Instaed of mixingup php and html server side you do everytihng in html client side. The following examples will give the same result only one is in the traditional php + html style the other one is done in the Angular way.<p>
-
-<p>Both example show a list of the 5 most recent post. The first example is done in Wordpress style where php and Html is mixed to generat the list. The second example is done in het Angular way wich is a pure html implementation.</p>
 
 <div class="row">
+	<div class="col-xs-5">
+
+		<h1>Why use Wp-Angular</h1>
+
+		<p>Wp-Angular allows you to write your Wordpress themes in an declarative way. Instaed of mixingup php and html server side you do everytihng in html client side. The following examples will give the same result only one is in the traditional php + html style the other one is done in the Angular way.<p>
+
+		<p>Both example show a list of the 5 most recent post. The first example is done in Wordpress style where php and Html is mixed to generat the list. The second example is done in het Angular way wich is a pure html implementation.</p>
+
+	</div>
+	<div class="col-xs-1"></div>
 	<div class="col-xs-6">
 		<h2>Wordpress style</h2>
 		<pre>
@@ -20,8 +25,8 @@
 	} 
 ?&gt;					
 		</pre>
-	</div>
-	<div class="col-xs-6">
+
+	
 		<h2>AngularJs way</h2>
 		<pre ng-non-bindable>
 &lt;ul wp-posts numberofposts=&quot;5&quot;&gt; 
